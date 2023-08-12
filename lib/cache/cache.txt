@@ -1,0 +1,42 @@
+----------------------------------- Cache Key Stucture ---------------------------
+
+Blogs -> all Blogs(public)
+
+
+blogId-blog -> Blog Related Details Of Blog
+blogId-comments -> comments of specific blog
+blogId-votes -> votes/downvotes of blog
+commentId-replies -> replies to specific comment
+userId-myblogs-> my blogs of user
+
+
+---------------------------------- Cache Clearing Stucture -------------------------
+
+1.Create A New Blog :
+    1.1: Clear Cache for all Blogs -> done (Working As Expected)
+    1.2: Clear Cache for that user my blog ->done (Working As Expected)
+
+2.Update A Blog By blogId:
+    2.1 : Same as 1.1 (Working As Expected)
+    2.2 : Same as 1.2 (Working As Expected)
+    2.3:  Clear cache for blog details (Working As Expected)
+
+3.Create A New Comment On blog:
+    3.1 Clear cache for all comments on blog (Working As Expected)
+
+4.Edit A Comment By Comment Id:
+    4.1 Clear Cache for all comments
+    4.2 Clear Cache for replies on that comment
+
+5.Create a votes/downvotes :
+    5.1: Clear cache for all blogs
+    5.2  Clear cache for userId - Blog
+    5.3  Clear cache for blogId - Blog
+
+6 Delete Blog By Id -> 2.1,2.2,2.3 (Working As Expected)
+
+7.Delete Comments by id
+8.Delete votes By id
+
+9.Replies to A comment:
+    9.1 Clear Cache for replies on that comment (Working As Expected)
